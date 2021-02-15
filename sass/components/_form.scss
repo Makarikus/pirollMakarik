@@ -1,0 +1,63 @@
+.contact-form {
+    margin: 0 auto; 
+    width: 68rem;
+
+    @include respond(phone) {
+        width: 100%;
+    }
+
+    &__input {
+        border: none;
+        color: $color-text-grey;
+        padding: 1.5rem;
+        width: 100%; 
+
+        &::-webkit-input-placeholder {
+            color: $color-text-grey; 
+        }           
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem); 
+    }  
+    
+    &__label {
+        display: block; 
+        transition: all .3s; 
+    }   
+    
+    &__span {
+        color: red; 
+    }
+
+    &__textarea {
+        border: none;
+        color: $color-text-grey;
+        height: 17rem;  
+        padding: 1.5rem; 
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color: $color-text-grey;
+        }         
+    }
+
+    &__textarea:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }    
+}
+
+.form-element-grid {
+    display: grid;
+    grid: auto / repeat(2, 1fr);
+    grid-column-gap: 3rem;
+
+    @include respond(phone) {
+        grid: auto / 1fr;
+        grid-column-gap: 0;
+    }
+}

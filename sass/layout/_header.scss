@@ -1,0 +1,44 @@
+.header {
+    background: url('../img/header-banner-cup.jpg') $color-header-grey; 
+    background-position: center;
+    background-size:cover;
+    padding: 4rem 0 20rem; 
+
+    @include respond(phone) {
+        background: $color-header-grey;
+        padding: 4rem 0 10rem;  
+    }
+
+    &__navigation-container {
+        display: grid;
+        grid: auto / repeat(2, 1fr); 
+        margin: 0 10rem 18rem;
+
+        @include respond(tablet-portrait) {
+            margin: 0 5rem 6rem;
+        }
+
+        @include respond(phone) {
+            margin: 0 2rem 6rem;
+        }
+    }
+
+    &__banner {
+        display: grid;
+        grid: auto / 60% 1fr;
+        margin: 0 10rem; 
+
+        @include respond(phone) {
+            grid: auto / 1fr;
+            margin: 0 5rem;
+        }
+    }
+
+    &__copy-container {
+        
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+}
+

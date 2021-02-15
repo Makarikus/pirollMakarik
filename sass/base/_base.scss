@@ -1,0 +1,189 @@
+// Reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+html {
+    // 1rem will be 10px
+    font-size: 62.5%; // 1rem = 10px  10px / 16px = 62.5%
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 10rem 0;
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &--stats {
+        background: $color-blue; 
+        padding: 10rem 0;  
+    }
+
+    &--specialities {
+        background: $color-section-grey; 
+    }
+
+    &--testimonials {
+        background: $color-blue;        
+        padding: 14rem;
+
+        @include respond(phone) {
+            padding: 14rem 3rem;
+        }
+    }
+
+    &--clients {
+        padding: 6rem 0; 
+    }
+
+    &--contact {
+        background: $color-section-grey; 
+        padding: 10rem 3rem; 
+    }
+}
+
+.skills {
+    display: grid;
+    grid: auto / repeat(2, 1fr);
+
+    @include respond(phone) {
+        grid: auto / 1fr; 
+    }
+
+    &__info {
+        background: $color-skills-grey;
+        padding: 16rem 8.5rem 16rem;
+    }
+
+    &__image {
+        background: url('../img/cactus-books.jpg') no-repeat top / cover $color-header-grey;
+
+        @include respond(phone) {
+            display: none;
+        }
+    } 
+}
+
+
+
+.product-images {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+
+    @include respond(tablet-portrait) {
+        grid: auto /repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid: auto / 1fr;
+    }
+
+    list-style: none;
+
+    &__link {
+        display: block;
+
+        &:hover {
+            background-color: rgba($color-overlay-black, .8); 
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 30rem;  
+    }
+}
+
+.specialities {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    grid-row-gap: 5rem;
+    justify-content: center;
+
+    @include respond(tablet-portrait) {
+        grid: auto / repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid: auto / 1fr;
+    }
+}
+
+.clients {
+    display: grid;
+    grid: auto / repeat(5, 1fr);
+    list-style: none;
+    justify-items: center; 
+
+    @include respond(tablet-portrait) {
+        grid: auto / repeat(3, 1fr);
+        grid-row-gap: 3rem;
+    }
+
+    @include respond(phone) {
+        grid: auto / 1fr;
+        grid-row-gap: 4rem;
+    }
+}
+
+.footer {
+    background: $color-footer-black;
+    padding: 9rem 0; 
+}
+
+.footer-grid {
+    display: grid;
+    grid: auto / 42% 25% repeat(2, 1fr) 15%;
+    margin: 0 10rem; 
+
+    @include respond(tablet-portrait) {
+        grid: auto/36% 30% repeat(3, 1fr);
+        margin: 0 6rem;
+    }
+
+    @include respond(phone) {
+        grid: auto / 1fr; 
+        grid-row-gap: 2rem; 
+    }
+}
+
+
+// Skills metering
+.meter { 
+	height: 3px;  /* Can be anything */
+	position: relative;
+    background: $color-skills-bar-grey;
+    margin: 1.5rem 0 3.5rem;
+}
+
+
+.meter > span {
+    display: block;
+    height: 100%;
+    background-color: $color-blue;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ux-span {
+      width: 75%;
+  }
+
+  .development-span {
+      width: 90%;
+  }
+
+  .marketing-span {
+      width: 65%;
+  }

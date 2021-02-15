@@ -1,0 +1,249 @@
+// fonts
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Nunito Sans', sans-serif;
+
+/*
+
+behance.net
+shutterstock.com
+mockupworld.co
+graphicburger.com
+freebiesbug.com
+unsplash.com
+
+
+Icons:
+http://themes-pixeden.com/font-demos/7-stroke
+
+*/
+
+body {
+    color: $color-text-grey;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6rem;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-headings-black;   
+    font-family: 'Montserrat', sans-serif; 
+}
+
+h1, h2 {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2.9rem;
+    letter-spacing: .07rem;
+}
+
+.header {
+    &__text {
+        font-size: 1.8rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.header-navigation {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; 
+    font-weight: bold;
+
+    &__item {
+        margin: 0 1.5rem;
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        &:link,
+        &:visited {
+            color: $color-headings-black;
+        }
+
+        &:active,
+        &:hover {
+            color: $color-blue;
+        }
+    }
+}
+
+.section {
+    &__heading {
+        text-align: center;
+    }
+    &__text {
+        margin: 0 auto 2.2rem;
+        text-align: center;
+        width: 50%;
+
+        @include respond(phone) {
+            width: 80%;
+        }
+    }
+}
+
+.skills {
+    &__name {       
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: .07rem;
+        text-transform: uppercase;
+    }    
+}
+
+.stats {
+    color: $color-white;
+}
+
+.stat {
+    &__icon {
+        display: flex;
+        font-size: 5rem;
+    }
+
+    &__amount {
+        color: $color-white;
+        letter-spacing: .07rem;
+    }
+
+    &__text {
+        font-size: 1.23rem;
+        letter-spacing: .05rem;
+        text-transform: uppercase;
+    }
+}
+
+.button--load-more {
+    font-size: 1.25rem;
+    letter-spacing: .09rem;
+    font-weight: 700;    
+    text-transform: uppercase; 
+
+    &:link, 
+    &:visited {
+        color: $color-image-dark-grey;
+        text-decoration: none;
+    }
+}
+
+.speciality {
+    text-align: center;
+
+    &__icon {
+        font-size: 5rem;
+    }
+
+    &__name {
+        font-size: 1.3rem;
+        letter-spacing: .07rem;
+        margin: 2rem 0 1.5rem;
+        text-transform: uppercase; 
+    }
+
+    &__text {
+        margin: 0 auto;
+        width: 22rem;
+    }
+}
+
+.testimonials {
+    color: $color-white; 
+
+    &__text {
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: .07rem;
+        margin: 0 auto 2.5rem;
+        width: 70%;
+
+        @include respond(tablet-portrait) {
+            width: 85%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        color: $color-white; 
+        font-size: 1.3rem;  
+        font-weight: 400;
+        text-transform: uppercase;        
+    }
+}
+
+.button {
+    color: $color-white;
+    font-size: 1.2rem;
+    font-weight: 700; 
+    letter-spacing: .10rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-section {
+    &__heading {
+        text-align: center; 
+    }
+
+    &__text {
+        margin: 0 auto 3rem;
+        text-align: center;
+        width: 55rem;
+    }
+}
+
+.contact-form {
+    &__label {
+        font-weight: 700;
+        text-align: left;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.5rem;        
+    }
+
+    &__textarea {
+        font-family: inherit;  
+        font-size: 1.5rem;        
+    }
+}
+
+.footer {
+    &__header {
+        color: $color-white;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: .07rem;
+    }
+
+    &__copy {
+        color: $color-footer-text-grey;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__social {
+        justify-self: flex-end;
+
+        @include respond(phone) {
+            justify-self: flex-start; 
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-footer-text-grey;
+        text-decoration: none;
+    }
+
+    &__link:active,
+    &__link:hover {
+        color: $color-white;
+    }
+}

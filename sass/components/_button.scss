@@ -1,0 +1,22 @@
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;     
+    background: $color-blue;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.8rem 4rem; 
+
+    &--load-more {
+        background: $color-section-grey;
+        display: block;
+        text-align: center;
+        padding: 4rem 0; 
+    }
+    
+    &--contact {
+        display: block;
+        margin: 0 auto; 
+    }
+}
